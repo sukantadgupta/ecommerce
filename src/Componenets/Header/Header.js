@@ -17,7 +17,7 @@ const Header = (props) => {
     <Navbar bg="dark" variant="dark">
       <Navbar.Brand href="#home">My Store</Navbar.Brand>
       <Nav className="mr-auto">
-        <Nav.Link href="#home">Home</Nav.Link>
+        <Nav.Link href="home">Home</Nav.Link>
         <Nav.Link href="#store">Store</Nav.Link>
         <Nav.Link href="about">About</Nav.Link>
 

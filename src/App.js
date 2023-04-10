@@ -8,10 +8,13 @@ import {Modal, Button } from 'react-bootstrap';
 import CartProvider from './store/CartProvider';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import About from './Componenets/Pages/About';
+import Home from './Componenets/Pages/Home';
 
 const router = createBrowserRouter([
   {path : "/",element : <Products/>},
-  {path : "/about",element : <About/>}
+  {path : "/about",element : <About/>},
+  {path : "/home",element : <Home/>}
+
 
 ]);
 function App() {
