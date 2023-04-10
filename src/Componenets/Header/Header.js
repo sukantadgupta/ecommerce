@@ -19,7 +19,7 @@ const Header = (props) => {
       <Nav className="mr-auto">
         <Nav.Link href="#home">Home</Nav.Link>
         <Nav.Link href="#store">Store</Nav.Link>
-        <Nav.Link href="#about">About</Nav.Link>
+        <Nav.Link href="about">About</Nav.Link>
 
       </Nav>
 

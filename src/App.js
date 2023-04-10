@@ -6,8 +6,14 @@ import Footer from "./Componenets/Footer/Footer";
 import Cart from "./Componenets/Cart/Cart";
 import {Modal, Button } from 'react-bootstrap';
 import CartProvider from './store/CartProvider';
+import { createBrowserRouter,RouterProvider } from 'react-router-dom';
+import About from './Componenets/Pages/About';
 
+const router = createBrowserRouter([
+  {path : "/",element : <Products/>},
+  {path : "/about",element : <About/>}
 
+]);
 function App() {
   const [showCart, setShowCart] = useState(false);
   const [cartElements, setCartElements] = useState([
@@ -47,6 +53,8 @@ function App() {
     <CartProvider>
     <>
     <Header onClick={handleCartClick}/>
+
+      <RouterProvider router={router}/>
     {/* <Button variant="outline-dark" className='ms-auto me-2' >Cart (0)</Button> */}
 
     <Modal show={showCart} onHide={handleCloseCart}>
@@ -63,7 +71,7 @@ function App() {
         </Modal.Footer>
       </Modal>
     
-    <Products/>
+    {/* <Products/> */}
     <Footer/>
     </>
     </CartProvider>
