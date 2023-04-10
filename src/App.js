@@ -5,7 +5,7 @@ import Header from "./Componenets/Header/Header";
 import Footer from "./Componenets/Footer/Footer";
 import Cart from "./Componenets/Cart/Cart";
 import {Modal, Button } from 'react-bootstrap';
-
+import CartProvider from './store/CartProvider';
 
 
 function App() {
@@ -44,7 +44,7 @@ function App() {
     );
   };
   return (
-    <div className="App">
+    <CartProvider>
     <>
     <Header onClick={handleCartClick}/>
     {/* <Button variant="outline-dark" className='ms-auto me-2' >Cart (0)</Button> */}
@@ -66,7 +66,7 @@ function App() {
     <Products/>
     <Footer/>
     </>
-    </div>
+    </CartProvider>
   );
 }
 

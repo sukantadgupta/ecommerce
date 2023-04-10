@@ -1,8 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState ,useContext} from 'react';
 import { Navbar, Nav,Button} from 'react-bootstrap';
+import CartContext from '../../store/cart-context';
+
 
 const Header = (props) => {
+    const cartContext = useContext(CartContext);
 
+    let qty =0;
+    cartContext.items.forEach(item => {
+      console.log(item)
+      qty = qty + Number(item.quantity);
+    })
 
 
   return (
@@ -15,7 +23,7 @@ const Header = (props) => {
 
       </Nav>
 
-      <Button variant="outline-light" className='ms-auto me-2' onClick={props.onClick}>Cart (0)</Button>
+      <Button variant="outline-light" className='ms-auto me-2' onClick={props.onClick}>Cart {qty}</Button>
 
     </Navbar>
   );
