@@ -9,11 +9,17 @@ import CartProvider from './store/CartProvider';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import About from './Componenets/Pages/About';
 import Home from './Componenets/Pages/Home';
+import ContactUs from './Componenets/Pages/ContactUs'
+
 
 const router = createBrowserRouter([
   {path : "/",element : <Products/>},
   {path : "/about",element : <About/>},
-  {path : "/home",element : <Home/>}
+  {path : "/home",element : <Home/>},
+  {path : "/contact_us",element : <ContactUs/>}
+
+
+
 
 
 ]);
