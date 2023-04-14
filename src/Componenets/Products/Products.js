@@ -1,6 +1,7 @@
 import React,{useContext} from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import CartContext from '../../store/cart-context';
+import { Link } from 'react-router-dom';
 
 
 const productsArr = [
@@ -57,14 +58,23 @@ const Products = (props) => {
       <Row>
         {productsArr.map((product, index) => (
           <Col key={index} md={4} className="mb-4">
-            <Card>
-              <Card.Img variant="top" src={product.imageUrl} />
+
+
+            <Card >
+            <Link to={"/product_details/" + product.id}>
+                <Card.Img variant="top" src={product.imageUrl} />
+              </Link>
               <Card.Body>
+            <Link to={"/product_details/" + product.id}>
+
                 <Card.Title>{product.title}</Card.Title>
                 <Card.Text>Price: ${product.price}</Card.Text>
+              </Link>
+
                 <Button variant="primary" onClick={() => addToCartHandler(product)}>Add to Cart</Button>
               </Card.Body>
             </Card>
+          
           </Col>
         ))}
       </Row>
