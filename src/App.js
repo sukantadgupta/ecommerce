@@ -11,6 +11,8 @@ import About from './Componenets/Pages/About';
 import Home from './Componenets/Pages/Home';
 import ContactUs from './Componenets/Pages/ContactUs'
 import ProductDetails from './Componenets/Products/ProductDetails';
+import Login from './Componenets/Pages/Login';
+
 
 
 const router = createBrowserRouter([
@@ -18,7 +20,9 @@ const router = createBrowserRouter([
   {path : "/about",element : <About/>},
   {path : "/home",element : <Home/>},
   {path : "/contact_us",element : <ContactUs/>},
-  {path : "/product_details/:id",element : <ProductDetails/>}
+  {path : "/product_details/:id",element : <ProductDetails/>},
+  {path : "/log_in",element : <Login/>}
+
 
 
 

@@ -20,6 +20,8 @@ const Header = (props) => {
         <Nav.Link href="home">Home</Nav.Link>
         <Nav.Link href="#store">Store</Nav.Link>
         <Nav.Link href="about">About</Nav.Link>
+        <Nav.Link href="log_in">Login</Nav.Link>
+
         <Nav.Link href="contact_us">Contact Us</Nav.Link>
 
 
